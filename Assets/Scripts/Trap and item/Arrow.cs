@@ -7,20 +7,12 @@ public class Arrow : MonoBehaviour
     private Rigidbody2D rb;
 
     private float speed = -5f;
+    private bool skipWall = true;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    void Update()
-    {
-        
-    }
-
-    private void FixedUpdate()
-    {
-        rb.velocity = new Vector2(rb.velocity.x, speed);
+        rb.velocity = new Vector2(0, speed);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,7 +22,11 @@ public class Arrow : MonoBehaviour
             PlayerStats.Instance.TakeDamage(10);
             Destroy(gameObject);
         }
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Wall"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Wall") && skipWall)
+        {
+            skipWall = false;
+        }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
             Destroy(gameObject);
         }
