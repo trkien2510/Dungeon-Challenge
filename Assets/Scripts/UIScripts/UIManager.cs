@@ -9,7 +9,6 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
-
     public Image bg;
     public TextMeshProUGUI txtGameOver;
     public float fadeDuration = 2f;
@@ -51,6 +50,7 @@ public class UIManager : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SaveSystem.DeleteSave();
     }
 
     public void Continue()
@@ -62,7 +62,7 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        SaveGame();
+        SaveSystem.DeleteSave();
     }
 
     public void QuitToHome()
