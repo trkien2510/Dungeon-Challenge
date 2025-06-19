@@ -216,7 +216,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1997878555
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &5666377163583511238
@@ -310,7 +310,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meleeRange: {fileID: 3233286954794684331}
-  damage: 10
   healthBar: {fileID: 6664783397359873128}
 --- !u!212 &6517121994530797253
 SpriteRenderer:
@@ -350,8 +349,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1997878555
+  m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 1614830366, guid: fb8759e67c89e97499ababf40883a09c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -11,6 +11,15 @@ public class Peak : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            damageTimer = 0f;
+            PlayerStats.Instance.TakeDamage(damage);
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
