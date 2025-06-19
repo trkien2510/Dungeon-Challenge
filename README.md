@@ -1,6 +1,6 @@
 Movement: A D W S  
-Tab: Open profile
-Level up and get more power
+Tab: Open profile  
+Level up and get more power  
 Defeat ghosts to deal more damage to boss
 
 ![image](https://github.com/user-attachments/assets/22609e0c-26bc-4822-8441-14cde31c735b)
