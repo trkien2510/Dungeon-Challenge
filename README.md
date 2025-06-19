@@ -1,18 +1,11 @@
-Di chuyển: A D W S  
-Tab để mở thông số người chơi và cài đặt  
+Movement: A D W S  
+Tab: Open profile
+Level up and get more power
+Defeat ghosts to deal more damage to boss
 
-![image](https://github.com/user-attachments/assets/1acc404a-a4bd-4a0f-b8d0-22fe69f67eaf)
-
-![image](https://github.com/user-attachments/assets/3f27846a-866c-47db-a193-4eeb69bba3fa)
-
-![image](https://github.com/user-attachments/assets/798bc3d4-1eb9-4759-8f22-f9c3b1ceb5e7)
-
-![image](https://github.com/user-attachments/assets/b11f6f08-f8d8-4ddd-b141-4066f4c11e99)
-
-![image](https://github.com/user-attachments/assets/1ee934a1-2970-4816-8c17-245c9ab9edce)
-
-![image](https://github.com/user-attachments/assets/470f4a38-0095-4613-a146-84af04cbe2ac)
-
-Boss: tiêu diệt các bóng ma được triệu hồi để trừ nhiều máu hơn
-
-![image](https://github.com/user-attachments/assets/f726e30a-98e8-4067-89c8-895f14ac12fd)
+![image](https://github.com/user-attachments/assets/22609e0c-26bc-4822-8441-14cde31c735b)
+![image](https://github.com/user-attachments/assets/eb69dc81-b26f-4e03-b4f5-b1ee0b167620)
+![image](https://github.com/user-attachments/assets/7f2fc533-a44d-4ce7-b890-7b98cb30018d)
+![image](https://github.com/user-attachments/assets/ea03848f-3dba-4387-843b-775e0b0981d8)
+![image](https://github.com/user-attachments/assets/c456dfa8-0d60-4fc1-9ca6-93211eb397db)
+![image](https://github.com/user-attachments/assets/20b7cada-8dae-4fc6-a7b0-fdc3ac7ea25a)
