@@ -1,17 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
 public class PlayOrContinue : MonoBehaviour
 {
-    public GameObject playButton;
-    public GameObject continueButton;
+    [SerializeField] GameObject playButton;
+    [SerializeField] GameObject continueButton;
     private string saveLocation;
 
     private void Awake()
     {
-        saveLocation = Path.Combine(Application.persistentDataPath, "SaveDate.json");
+        saveLocation = Path.Combine(Application.persistentDataPath, "DungeonChallengeData.json");
     }
 
     void Start()

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
@@ -18,9 +17,9 @@ public class ExperienceManager : MonoBehaviour
     void Start()
     {
         Instance = this;
-        if (File.Exists(Path.Combine(Application.persistentDataPath, "SaveDate.json")))
+        if (File.Exists(Path.Combine(Application.persistentDataPath, "DungeonChallengeData.json")))
         {
-            SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(Path.Combine(Application.persistentDataPath, "SaveDate.json")));
+            SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(Path.Combine(Application.persistentDataPath, "DungeonChallengeData.json")));
             currentLevel = saveData.currentLevel;
             currentExperience = saveData.currentExperience;
             experienceToNextLevel = saveData.expToNextLevel;

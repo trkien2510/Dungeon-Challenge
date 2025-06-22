@@ -1,6 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class MeleeEnemy : MonoBehaviour
@@ -9,7 +7,7 @@ public class MeleeEnemy : MonoBehaviour
     private Animator anim;
 
     [Header("for attack")]
-    public GameObject meleeRange;
+    [SerializeField] GameObject meleeRange;
     private bool canAttack = false;
     private bool isAttacking = false;
     private float attackDuration = 2f;
@@ -25,7 +23,7 @@ public class MeleeEnemy : MonoBehaviour
     private bool playerInRange = false;
 
     [Header("health")]
-    public EnemyHealthBar healthBar;
+    [SerializeField] EnemyHealthBar healthBar;
     private float health;
     private float maxHealth;
 

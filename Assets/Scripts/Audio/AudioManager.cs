@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -8,8 +6,8 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
 
     [Header("Audio Sources")]
-    public AudioSource bgmSource;
-    public AudioSource sfxSource;
+    [SerializeField] AudioSource bgmSource;
+    [SerializeField] AudioSource sfxSource;
 
     [Header("Audio Clips")]
     public AudioClip bgMusic;
@@ -17,7 +15,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip skeletonDead;
 
     [Header("Audio Mixer")]
-    public AudioMixer audioMixer;
+    [SerializeField] AudioMixer audioMixer;
 
     private void Awake()
     {

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UndeadScript : MonoBehaviour
@@ -8,23 +7,23 @@ public class UndeadScript : MonoBehaviour
     private Animator anim;
 
     [Header("for attack")]
-    public GameObject meleeRange;
-    public float attackRange = 1.5f;
+    [SerializeField] GameObject meleeRange;
+    private float attackRange = 1.5f;
     private bool canAttack = true;
     private bool isAttacking = false;
-    public float attackCooldown = 2f;
+    private float attackCooldown = 2f;
     private float damage = 50;
 
     [Header("Summon")]
-    public GameObject summonPrefab;
-    public Transform summonPoint;
-    public float summonInterval = 10f;
+    [SerializeField] GameObject summonPrefab;
+    [SerializeField] Transform summonPoint;
+    private float summonInterval = 10f;
 
     [Header("for moving")]
     private Transform playerPosition;
     private Vector2 moveDirection;
     private Vector3 targetPosition;
-    public float speed = 2f;
+    private float speed = 2f;
     private bool isFacingRight = true;
 
     void Start()

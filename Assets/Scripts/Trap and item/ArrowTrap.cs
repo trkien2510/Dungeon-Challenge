@@ -1,10 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ArrowTrap : MonoBehaviour
 {
-    public GameObject arrowPrefab;
+    [SerializeField] GameObject arrowPrefab;
 
     private float TimeInterval = 2f;
 

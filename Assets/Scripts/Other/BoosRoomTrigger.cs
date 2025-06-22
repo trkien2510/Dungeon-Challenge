@@ -1,27 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BoosRoomTrigger : MonoBehaviour
 {
-    public GameObject boss;
-    public GameObject bossHealth;
-    public GameObject leftDoor;
-    public GameObject rightDoor;
-    public Sprite leftDoorClose;
-    public Sprite rightDoorClose;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] GameObject boss;
+    [SerializeField] GameObject bossHealth;
+    [SerializeField] GameObject leftDoor;
+    [SerializeField] GameObject rightDoor;
+    [SerializeField] Sprite leftDoorClose;
+    [SerializeField] Sprite rightDoorClose;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

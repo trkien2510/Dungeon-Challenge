@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public static class SaveSystem
 {
-    private static string saveLocation = Path.Combine(Application.persistentDataPath, "SaveDate.json");
+    private static string saveLocation = Path.Combine(Application.persistentDataPath, "DungeonChallengeData.json");
 
     public static void SaveGame()
     {

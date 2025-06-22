@@ -9,33 +9,46 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
-    public Image bg;
+    public Image gameOverBG;
     public TextMeshProUGUI txtGameOver;
+    public Image gameCompleteBG;
+    public TextMeshProUGUI txtGameComplete;
     public float fadeDuration = 2f;
     public float delayBeforeHome = 3f;
 
     private void Awake()
     {
         Instance = this;
-        if (bg != null && txtGameOver != null)
+        if (gameOverBG != null && txtGameOver != null && gameCompleteBG != null && txtGameComplete != null)
         {
-            bg.gameObject.SetActive(false);
+            gameOverBG.gameObject.SetActive(false);
             txtGameOver.gameObject.SetActive(false);
+            gameCompleteBG.gameObject.SetActive(false);
+            txtGameComplete.gameObject.SetActive(false);
         }
     }
 
     public void GameOver()
     {
-        StartCoroutine(FadeInCoroutine());
+        StartCoroutine(FadeInCoroutine(gameOverBG, txtGameOver));
         SaveSystem.DeleteSave();
     }
 
-    private IEnumerator FadeInCoroutine()
+    public void GameComplete()
     {
+        StartCoroutine(FadeInCoroutine(gameCompleteBG, txtGameComplete));
+        SaveSystem.DeleteSave();
+    }
+
+    private IEnumerator FadeInCoroutine(Image bg, TextMeshProUGUI txt)
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         float elapsed = 0f;
         Color color = bg.color;
         bg.gameObject.SetActive(true);
-        txtGameOver.gameObject.SetActive(true);
+        txt.gameObject.SetActive(true);
         while (elapsed < fadeDuration)
         {
             elapsed += Time.deltaTime;
@@ -49,17 +62,23 @@ public class UIManager : MonoBehaviour
 
     public void PlayGame()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         SaveSystem.DeleteSave();
     }
 
     public void Continue()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
         LoadGame();
     }
 
     public void RestartGame()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         SaveSystem.DeleteSave();

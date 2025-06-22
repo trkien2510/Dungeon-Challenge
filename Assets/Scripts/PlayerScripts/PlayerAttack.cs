@@ -1,11 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public GameObject weapon;
+    [SerializeField] GameObject weapon;
     private Animator weaponAnim;
     private bool canAttack = true;
     private float timeAttack = 0.5f;

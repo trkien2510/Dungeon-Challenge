@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GhostScript : MonoBehaviour
@@ -9,17 +8,17 @@ public class GhostScript : MonoBehaviour
     private UndeadHealth undeadHealth;
 
     [Header("health")]
-    public EnemyHealthBar healthBar;
+    [SerializeField] EnemyHealthBar healthBar;
     private float health;
     private float maxHealth = 50;
 
     [Header("Movement")]
-    public float moveSpeed = 3f;
+    private float moveSpeed = 3f;
     private Vector2 moveDirection;
     private float changeDirectionTime = 1f;
     private float changeDirectionTimer;
 
-    public float wallCheckDistance = 0.5f;
+    private float wallCheckDistance = 0.5f;
 
     void Start()
     {

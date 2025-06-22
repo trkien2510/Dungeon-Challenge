@@ -1,17 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
-    public GameObject menu;
-    public GameObject experience;
-    public GameObject level;
-    public GameObject hpStat;
-    public GameObject dmgStat;
-    public GameObject speedStat;
-    public GameObject statsPoints;
+    [SerializeField] GameObject menu;
+    [SerializeField] GameObject experience;
+    [SerializeField] GameObject level;
+    [SerializeField] GameObject hpStat;
+    [SerializeField] GameObject dmgStat;
+    [SerializeField] GameObject speedStat;
+    [SerializeField] GameObject statsPoints;
 
     private void Start()
     {
@@ -23,6 +21,8 @@ public class MenuController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+            Cursor.visible = !Cursor.visible;
+            Cursor.lockState = Cursor.visible ? CursorLockMode.None : CursorLockMode.Confined;
             menu.SetActive(!menu.activeSelf);
             experience.SetActive(!menu.activeSelf);
         }

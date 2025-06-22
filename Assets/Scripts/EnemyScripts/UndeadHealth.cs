@@ -1,14 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UndeadHealth : MonoBehaviour
 {
-    public HealthBar healthBar;
-    public float currentHealth;
-    public float maxHealth = 100000f;
+    [SerializeField] HealthBar healthBar;
+    private Animator anim;
+    private float currentHealth;
+    private float maxHealth = 50000f;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (currentHealth <= 0f || currentHealth > maxHealth)
@@ -20,9 +19,10 @@ public class UndeadHealth : MonoBehaviour
             healthBar.SetMaxHealth(maxHealth);
             healthBar.SetHealth(currentHealth);
         }
+
+        anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (healthBar != null)
@@ -40,12 +40,16 @@ public class UndeadHealth : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            Die();
+            StartCoroutine(DeadRoutin());
         }
     }
 
-    private void Die()
+    private IEnumerator DeadRoutin()
     {
+        GetComponent<UndeadScript>().enabled = false;
+        anim.SetTrigger("Dead");
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
+        UIManager.Instance.GameComplete();
     }
 }

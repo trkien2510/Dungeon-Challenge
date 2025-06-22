@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class AudioController : MonoBehaviour
 {
-    public Slider sliderBGM;
-    public Slider sliderSFX;
+    [SerializeField] Slider sliderBGM;
+    [SerializeField] Slider sliderSFX;
 
     void Start()
     {
